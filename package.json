@@ -5,7 +5,7 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"prebuild": "rm -rf dist",
-		"build": "npx stylus src/assets/stylus -o ./dist",
+		"build": "npx gulp",
 		"safe-install": "npm i && node dev/sweeper.fix.js",
 		"lint": "vue-cli-service lint",
 		"deploy": "node dev/deploy.js",
@@ -21,8 +21,13 @@
 		"@vue/cli-service": "^3.11.0",
 		"@vue/eslint-config-airbnb": "^4.0.0",
 		"@vue/test-utils": "1.0.0-beta.29",
+		"autoprefixer": "^9.7.0",
 		"eslint": "^5.16.0",
 		"eslint-plugin-vue": "^5.0.0",
+		"gulp": "^4.0.2",
+		"gulp-stylus": "^2.7.0",
+		"poststylus": "^1.0.0",
+		"rucksack-css": "^1.0.2",
 		"stylus": "^0.54.5",
 		"stylus-loader": "^3.0.2",
 		"vue-template-compiler": "^2.6.10"

@@ -14,7 +14,9 @@ module.exports = {
 			template: 'src/index.ejs',
 			filename: 'index.html',
 			templateParameters: {
-				SITE_RELATIVE_URL: privateJSON.siteRelativePath
+				HOST: privateJSON.siteUrl,
+				SITE_RELATIVE_URL: privateJSON.siteRelativePath,
+				DEPLOY_PATH: privateJSON.deployPath
 			}
 		}
 	},

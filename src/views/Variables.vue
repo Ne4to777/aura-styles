@@ -146,8 +146,10 @@ export default {
 body
 	font-family Roboto
 	color $black
+	padding 20px
 
 h1
+	font-size 28px
 	font-family Arial
 	color $gunpowder
 
@@ -325,8 +327,8 @@ table
 .border-width_base
 	border-width $border-width_base
 
-.border-width_bold
-	border-width $border-width_bold
+.border-width_large
+	border-width $border-width_large
 
 .border-radius_small
 	border-radius $border-radius_small
