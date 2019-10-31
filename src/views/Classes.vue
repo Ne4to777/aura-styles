@@ -1,14 +1,7 @@
 <template>
-	<div class="flex">
-		<div class="test">
-			<h1>This is an about page</h1>
-		</div>
-		<div class="test">
-			<h1>This is an about page</h1>
-		</div>
-	</div>
+	<div class="container">Sample</div>
 </template>
 
 <style lang="stylus">
-@import './../assets/stylus/classes.styl'
+@import './../assets/stylus/global.styl'
 </style>

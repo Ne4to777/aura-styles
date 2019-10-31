@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer')
 const rucksack = require('rucksack-css')
 
 gulp.task('stylus', () => gulp
-	.src('./src/assets/stylus/classes.styl')
+	.src('./src/assets/stylus/global.styl')
 	.pipe(stylus({
 		use: [
 			poststylus([autoprefixer, rucksack])

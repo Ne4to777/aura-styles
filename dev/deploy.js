@@ -11,3 +11,9 @@ robocopy({
 	},
 	copy: { subdirs: true }
 })
+
+robocopy({
+	source: './src/assets/stylus',
+	destination: path.join(config.siteDisk, config.siteRelativePath, config.stylusPath),
+	files: ['variables.*']
+})

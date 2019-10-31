@@ -8,7 +8,7 @@
 		"build": "npx gulp",
 		"safe-install": "npm i && node dev/sweeper.fix.js",
 		"lint": "vue-cli-service lint",
-		"deploy": "node dev/deploy.js",
+		"deploy": "npm run build && node dev/deploy.js",
 		"test:unit": "vue-cli-service test:unit"
 	},
 	"dependencies": {

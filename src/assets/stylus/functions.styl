@@ -1,0 +1,17 @@
+
+@import 'data.styl'
+
+classByProperty(name, suffix = '')
+	for size in sizes
+		.{name}{suffix}_{size}
+			{name}{suffix} $ + name + _ + size
+
+classesByAxes(name)
+	classByProperty(name)
+
+	for axis in axes
+		classByProperty(name, '-' + axis)
+
+classesByNamesAndAxes(props)
+	for prop in props
+		classesByAxes(prop)

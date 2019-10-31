@@ -24,6 +24,20 @@
 				</tr>
 			</table>
 		</div>
+		<h1>Line height</h1>
+		<div class="line-height">
+			<table>
+				<tr>
+					<th v-for="(lineHeight,i) in lineHeights" :key="i">{{lineHeight}}</th>
+				</tr>
+				<td v-for="(lineHeight,i) in lineHeights" :key="i">
+					<div
+						class="item"
+						:class="`line-height_${lineHeight}`"
+					>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+				</td>
+			</table>
+		</div>
 		<h1>Paddings and Margins</h1>
 		<div class="paddings-and-margins">
 			<table>
@@ -96,42 +110,49 @@
 <script>
 /* eslint {max-len:0} */
 const sizes = [
-	'extra-small',
-	'very-small',
+	'smallest',
+	'smaller',
 	'small',
 	'base',
 	'large',
-	'very-large',
-	'extra-large'
+	'larger',
+	'largest'
 ]
 export default {
 	data() {
 		return {
 			colors: [
 				'white',
-				'ghostwhite',
-				'whisper',
+				'darkwhite',
 				'lightgrey',
 				'grey',
-				'gunpowder',
+				'darkgrey',
+				'lightblack',
 				'black',
+				'lightblue',
 				'blue',
-				'green',
-				'red',
+				'darkblue',
 				'lightgreen',
-				'sunny'
+				'green',
+				'darkgreen',
+				'lightred',
+				'red',
+				'lightyellow',
+				'yellow',
+				'darkyellow'
 			],
 			fonts: {
 				size: sizes,
 				weight: sizes.slice(1)
 			},
+			lineHeights: sizes,
 			paddings: sizes,
 			margins: sizes,
 			borders: {
 				width: sizes.slice(3, 5),
-				radius: [...sizes.slice(2, 4), 'half']
+				radius: sizes
 			},
-			opacities: sizes.slice(2, 5),
+			opacities: sizes,
 			shadows: sizes.slice(3, 4),
 			transitions: sizes.slice(2, 4)
 		}
@@ -176,13 +197,9 @@ table
 	background-color $white
 	color $white
 
-.ghostwhite
-	background-color $ghostwhite
-	color $ghostwhite
-
-.whisper
-	background-color $whisper
-	color $whisper
+.darkwhite
+	background-color $darkwhite
+	color $darkwhite
 
 .lightgrey
 	background-color $lightgrey
@@ -192,47 +209,75 @@ table
 	background-color $grey
 	color $grey
 
-.gunpowder
-	background-color $gunpowder
-	color $gunpowder
+.darkgrey
+	background-color $darkgrey
+	color $darkgrey
+
+.lightblack
+	background-color $lightblack
+	color $lightblack
 
 .black
 	background-color $black
 	color $black
 
+.lightblue
+	background-color $lightblue
+	color $lightblue
+
 .blue
 	background-color $blue
 	color $blue
 
-.green
-	background-color $green
-	color $green
-
-.red
-	background-color $red
-	color $red
+.darkblue
+	background-color $darkblue
+	color $darkblue
 
 .lightgreen
 	background-color $lightgreen
 	color $lightgreen
 
-.sunny
-	background-color $sunny
-	color $sunny
+.green
+	background-color $green
+	color $green
 
-// SIZE
+.darkgreen
+	background-color $darkgreen
+	color $darkgreen
+
+.lightred
+	background-color $lightred
+	color $lightred
+
+.red
+	background-color $red
+	color $red
+
+.lightyellow
+	background-color $lightyellow
+	color $lightyellow
+
+.yellow
+	background-color $yellow
+	color $yellow
+
+.darkyellow
+	background-color $darkyellow
+	color $darkyellow
+
+// FONT SIZE
 .fonts table
 	tr
-		height $font-size_extra-large
+		height $font-size_largest
 
 	td
 		padding 0 10px
 
-.font-size_extra-small
-	font-size $font-size_extra-small
+.font-size_smallest
+	font-size $font-size_smallest
 
-.font-size_very-small
-	font-size $font-size_very-small
+.font-size_smaller
+	font-size $font-size_smaller
 
 .font-size_small
 	font-size $font-size_small
@@ -243,15 +288,15 @@ table
 .font-size_large
 	font-size $font-size_large
 
-.font-size_very-large
-	font-size $font-size_very-large
+.font-size_larger
+	font-size $font-size_larger
 
-.font-size_extra-large
-	font-size $font-size_extra-large
+.font-size_largest
+	font-size $font-size_largest
 
-// WEIGHT
-.font-weight_very-small
-	font-weight $font-weight_very-small
+// FONT WEIGHT
+.font-weight_smaller
+	font-weight $font-weight_smaller
 
 .font-weight_small
 	font-weight $font-weight_small
@@ -262,11 +307,36 @@ table
 .font-weight_large
 	font-weight $font-weight_large
 
-.font-weight_very-large
-	font-weight $font-weight_very-large
+.font-weight_larger
+	font-weight $font-weight_larger
 
-.font-weight_extra-large
-	font-weight $font-weight_extra-large
+.font-weight_largest
+	font-weight $font-weight_largest
+
+// LINE HEIGHT
+.line-height .item
+	margin $margin_small
+
+.line-height_smallest
+	line-height $line-height_smallest
+
+.line-height_smaller
+	line-height $line-height_smaller
+
+.line-height_small
+	line-height $line-height_small
+
+.line-height_base
+	line-height $line-height_base
+
+.line-height_large
+	line-height $line-height_large
+
+.line-height_larger
+	line-height $line-height_larger
+
+.line-height_largest
+	line-height $line-height_largest
 
 // PADDING
 .paddings-and-margins .item
@@ -274,11 +344,11 @@ table
 	border 1px solid $lightgrey
 	background-color $lightgreen
 
-.padding_extra-small
-	padding 0 $padding_extra-small
+.padding_smallest
+	padding 0 $padding_smallest
 
-.padding_very-small
-	padding 0 $padding_very-small
+.padding_smaller
+	padding 0 $padding_smaller
 
 .padding_small
 	padding 0 $padding_small
@@ -289,18 +359,18 @@ table
 .padding_large
 	padding 0 $padding_large
 
-.padding_very-large
-	padding 0 $padding_very-large
+.padding_larger
+	padding 0 $padding_larger
 
-.padding_extra-large
-	padding 0 $padding_extra-large
+.padding_largest
+	padding 0 $padding_largest
 
-// MARNIG
-.margin_extra-small
-	margin 0 $margin_extra-small
+// MARGIN
+.margin_smallest
+	margin 0 $margin_smallest
 
-.margin_very-small
-	margin 0 $margin_very-small
+.margin_smaller
+	margin 0 $margin_smaller
 
 .margin_small
 	margin 0 $margin_small
@@ -311,11 +381,11 @@ table
 .margin_large
 	margin 0 $margin_large
 
-.margin_very-large
-	margin 0 $margin_very-large
+.margin_larger
+	margin 0 $margin_larger
 
-.margin_extra-large
-	margin 0 $margin_extra-large
+.margin_largest
+	margin 0 $margin_largest
 
 // BORDER
 .borders .item
@@ -330,14 +400,26 @@ table
 .border-width_large
 	border-width $border-width_large
 
+.border-radius_smallest
+	border-radius $border-radius_smallest
+
+.border-radius_smaller
+	border-radius $border-radius_smaller
+
 .border-radius_small
 	border-radius $border-radius_small
 
 .border-radius_base
 	border-radius $border-radius_base
 
-.border-radius_half
-	border-radius $border-radius_half
+.border-radius_large
+	border-radius $border-radius_large
+
+.border-radius_larger
+	border-radius $border-radius_larger
+
+.border-radius_largest
+	border-radius $border-radius_largest
 
 // OPACITY
 .opacity
@@ -354,18 +436,31 @@ table
 			font-size 30px
 			background-color $white
 
-.opacity_large
-	opacity $opacity_large
+.opacity_smallest
+	opacity $opacity_smallest
 
-.opacity_base
-	opacity $opacity_base
+.opacity_smaller
+	opacity $opacity_smaller
 
 .opacity_small
 	opacity $opacity_small
 
+.opacity_base
+	opacity $opacity_base
+
+.opacity_large
+	opacity $opacity_large
+
+.opacity_larger
+	opacity $opacity_larger
+
+.opacity_largest
+	opacity $opacity_largest
+
 // SHADOW
-.item
-	margin $margin_small
+.shadow .item
+	margin $margin_largest
+	padding $padding_largest
 
 .shadow_base
 	box-shadow $shadow_base
@@ -373,6 +468,9 @@ table
 // TRANSITION
 .transition
 	.item
+		margin $margin_largest
+		padding $padding_largest
+
 		&:hover
 			background-color $black
 			color $white

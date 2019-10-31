@@ -10,19 +10,42 @@
 // =============     =====    ====        ====    ====  ====  ======
 // =================================================================
 
-$black = #222222
+// MONOCHROME
 $white = #ffffff
 $ghostwhite = #f8f8f8
-$blue = #68b3ff
-$grey = #989b9d
 $whisper = #e6e6e6
-$lightgrey = #dedede
+$cloud = #dedede
+$anchor = #989b9d
 $gunpowder = #4d4f50
-$green = #00aa00
-$red = #ff6677
-$lightgreen = #7cE6a6
+$black = #222222
+$darkwhite = $ghostwhite
+$lightgrey = $whisper
+$grey = $cloud
+$darkgrey = $anchor
+$lightblack = $gunpowder
+// BLUE
+$cerulean = #0097fe
+$lightblue = #68b3ff
+$blue = $cerulean
+$darkblue = #0057ff
+// GREEN
+$mint = #7ce6a6
+$fern = #67c15e
+$emerald = #009602
+$lightgreen = $mint
+$green = $fern
+$darkgreen = $emerald
+// RED
+$rogue = #ff6677
+$red = #ec4a39
+$lightred = $rogue
+// YELLOW
+$butterscotch = #ffc202
+$bumblebee = #fedb01
 $sunny = #ffce00
-
+$lightyellow = $bumblebee
+$yellow = $sunny
+$darkyellow = $butterscotch
 // ==========================================================
 // ===========        ====    ====  =======  ==        ======
 // ===========  =========  ==  ===   ======  =====  =========
@@ -36,21 +59,38 @@ $sunny = #ffce00
 // ==========================================================
 
 // Size
-$font-size_extra-small = 12px
-$font-size_very-small = 14px
-$font-size_small = 15px
-$font-size_base = 16px
-$font-size_large = 20px
-$font-size_very-large = 32px
-$font-size_extra-large = 36px
+$font-size_smallest = 9px
+$font-size_smaller = 10px
+$font-size_small = 12px
+$font-size_base = 14px
+$font-size_large = 16px
+$font-size_larger = 20px
+$font-size_largest = 26px
 // Weight
-$font-weight_very-small = 100
-$font-weight_small = 200
-$font-weight_base = 300
-$font-weight_large = 400
-$font-weight_very-large = 600
-$font-weight_extra-large = 900
-
+$font-weight_smaller = 100
+$font-weight_small = 300
+$font-weight_base = 400
+$font-weight_large = 500
+$font-weight_larger = 700
+$font-weight_largest = 900
+// ===================================================================================================================
+// ===========  ========    ==  =======  ==        =======  ====  ==        ==    ===      ===  ====  ==        ======
+// ===========  =========  ===   ======  ==  =============  ====  ==  =========  ===   ==   ==  ====  =====  =========
+// ===========  =========  ===    =====  ==  =============  ====  ==  =========  ===  ====  ==  ====  =====  =========
+// ===========  =========  ===  ==  ===  ==  =============  ====  ==  =========  ===  ========  ====  =====  =========
+// ===========  =========  ===  ===  ==  ==      =========        ==      =====  ===  ========        =====  =========
+// ===========  =========  ===  ====  =  ==  =============  ====  ==  =========  ===  ===   ==  ====  =====  =========
+// ===========  =========  ===  =====    ==  =============  ====  ==  =========  ===  ====  ==  ====  =====  =========
+// ===========  =========  ===  ======   ==  =============  ====  ==  =========  ===   ==   ==  ====  =====  =========
+// ===========        ==    ==  =======  ==        =======  ====  ==        ==    ===      ===  ====  =====  =========
+// ===================================================================================================================
+$line-height_smallest = 0.9
+$line-height_smaller = 1
+$line-height_small = 1.2
+$line-height_base = 1.5
+$line-height_large = 1.8
+$line-height_larger = 2
+$line-height_largest = 2.4
 // ====================================================================================
 // ===========       ======  =====       ===       ===    ==  =======  ===      =======
 // ===========  ====  ====    ====  ====  ==  ====  ===  ===   ======  ==   ==   ======
@@ -62,15 +102,13 @@ $font-weight_extra-large = 900
 // ===========  ========  ====  ==  ====  ==  ====  ===  ===  ======   ==   ==   ======
 // ===========  ========  ====  ==       ===       ===    ==  =======  ===      =======
 // ====================================================================================
-
-$padding_extra-small = 5px
-$padding_very-small = 10px
+$padding_smallest = 5px
+$padding_smaller = 10px
 $padding_small = 15px
 $padding_base = 20px
 $padding_large = 25px
-$padding_very-large = 30px
-$padding_extra-large = 35px
-
+$padding_larger = 30px
+$padding_largest = 35px
 // ===========================================================================
 // ===========  =====  =====  =====       ====      ===    ==  =======  ======
 // ===========   ===   ====    ====  ====  ==   ==   ===  ===   ======  ======
@@ -82,15 +120,13 @@ $padding_extra-large = 35px
 // ===========  =====  ==  ====  ==  ====  ==   ==   ===  ===  ======   ======
 // ===========  =====  ==  ====  ==  ====  ===      ===    ==  =======  ======
 // ===========================================================================
-
-$margin_extra-small = 5px
-$margin_very-small = 10px
+$margin_smallest = 5px
+$margin_smaller = 10px
 $margin_small = 15px
 $margin_base = 20px
 $margin_large = 25px
-$margin_very-large = 30px
-$margin_extra-large = 35px
-
+$margin_larger = 30px
+$margin_largest = 35px
 // ===========================================================================
 // ===========      ======    ====       ===       ===        ==       =======
 // ===========  ===  ====  ==  ===  ====  ==  ====  ==  ========  ====  ======
@@ -107,10 +143,13 @@ $margin_extra-large = 35px
 $border-width_base = 1px
 $border-width_large = 2px
 // Radius
+$border-radius_smallest = 0px
+$border-radius_smaller = 1px
 $border-radius_small = 2px
 $border-radius_base = 4px
-$border-radius_half = 50%
-
+$border-radius_large = 6px
+$border-radius_larger = 8px
+$border-radius_largest = 50%
 // =================================================================================
 // =============    ====       ======  =======     ===    ==        ==  ====  ======
 // ============  ==  ===  ====  ====    =====  ===  ===  ======  =====   ==   ======
@@ -122,11 +161,13 @@ $border-radius_half = 50%
 // ============  ==  ===  ========  ====  ===  ===  ===  ======  ========  =========
 // =============    ====  ========  ====  ====     ===    =====  ========  =========
 // =================================================================================
-
-$opacity_large = 0.8
-$opacity_base = 0.5
+$opacity_smallest = 0.2
+$opacity_smaller = 0.3
 $opacity_small = 0.4
-
+$opacity_base = 0.5
+$opacity_large = 0.7
+$opacity_larger = 0.8
+$opacity_largest = 0.9
 // =================================================================================
 // ============      ===  ====  =====  =====       =====    ====  ====  ====  ======
 // ===========  ====  ==  ====  ====    ====  ====  ===  ==  ===  ====  ====  ======
@@ -138,9 +179,7 @@ $opacity_small = 0.4
 // ===========  ====  ==  ====  ==  ====  ==  ====  ===  ==  =====    ==    ========
 // ============      ===  ====  ==  ====  ==       =====    =======  ====  =========
 // =================================================================================
-
-$shadow_base = 0px 2px 8px -4px $black
-
+$shadow_base = 1px 1px 10px -3px $grey
 // =================================================================================================================
 // ===========        ==       ======  =====  =======  ===      ===    ==        ==    ====    ====  =======  ======
 // ==============  =====  ====  ====    ====   ======  ==  ====  ===  ======  ======  ====  ==  ===   ======  ======
