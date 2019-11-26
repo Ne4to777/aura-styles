@@ -3,13 +3,45 @@
 
 body
 	background-color $ghostwhite
+	font-family Roboto
+	font-size $font-size_base
+	line-height $line-height_base
 
-.container
-	border $border-width_base solid $whisper
-	border-radius $border-radius_base
-	background-color $white
-	padding $padding_base
-	vertical-align middle
+.body__background-placeholder
+	background-image url('/common/Images/current/master/background/index.png')
+
+a
+	text-decoration none
+	outline none
+	color inherit
+
+.cursor_pointer
+	cursor pointer
+
+.master
+	min-width 930px
+
+	&__widgets
+		width 256px
+
+		&-placeholder
+			width 256px
+
+	&-sidebar
+		&__background-placeholder
+			background-image url('/common/Images/current/sidebar/background/index.png')
+
+		&__logo
+			background-image url('/common/Images/current/sidebar/logo/index.png')
+
+		&__notification
+			background-image url('/common/Images/current/sidebar/notification/index.svg')
+
+		&__profile-avatar
+			background-image url('/common/Images/current/master/anonymous/index.png')
+
+.to-top-scroller
+	width 100px
 
 .display_inline-block
 	display inline-block

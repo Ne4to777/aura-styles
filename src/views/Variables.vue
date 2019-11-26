@@ -173,6 +173,7 @@ h1
 	font-size 28px
 	font-family Arial
 	color $gunpowder
+	margin $margin_base 0
 
 table
 	border-collapse collapse
